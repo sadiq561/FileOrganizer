@@ -19,6 +19,23 @@ html, body {
     border-width: 0;
     border-style: solid;
     border-color: #e5e7eb;
+    .content-search {
+        padding-left: 2rem;
+        .search-box {
+            width: 90%;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            border-color: #00A3EE;
+            margin-bottom: 0.5rem;
+        }
+        .archive, .delete {
+            height: 2rem;
+            width: 5%;
+            padding-top: 0rem;
+            color:rgb(1, 87, 94);
+            cursor: pointer;
+        }
+    }
 }
 
 .font-bold {
@@ -30,8 +47,9 @@ html, body {
 }
 
 .dashboardMenu {
-    background-color: rgb(41, 183, 239);
-    width: 20%;
+    background-color: rgb(5, 84, 90);
+    width: 15%;
+    padding-left: 2rem;
     .dashboardHeader {
         margin-bottom: 1.5rem;
         line-height: 1.75rem;
@@ -39,48 +57,167 @@ html, body {
     .menuItem {
         margin-right: 0.5rem;
         font-size: 1.5rem;
+        padding: 0.5rem;
+        cursor: pointer;
     }
+    .commands {
+        padding-top: 1rem;
+    }
+}
+
+.main-content {
+    width: 90%;
+    overflow-y: hidden;
 }
 
 .content {
-    width: 60%;
+    width: 95%;
+    height: 50%;
     padding: 1.5rem;
+    margin-left: 1rem;
     flex-grow: 1;
+    .contentScroll {
+        overflow-y: scroll;
+        height: 95%;
+    }
+    .group {
+        cursor: pointer;
+        .header {
+            display: flex;
+            .ui.small.label {
+                font-size: 0.8rem;
+                display: inline-block;
+                line-height: 1.5;
+                vertical-align: baseline;
+                margin: 0em 0.14285714em;
+                background-color: #E8E8E8;
+                background-image: none;
+                padding: 0.6em 0.8em;
+                color: rgba(0,0,0,0.6);
+                text-transform: none;
+                font-weight: bold;
+                border: 0px solid transparent;
+                border-radius: 0.8rem;
+            }
+        }
+    }
 }
 
 .graphicView {
-    width: 20%;;
-}
-
-.rounded-lg {
-    border-radius: 0.5rem;
-}
-
-.h-20 {
-    height: 5rem;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    height: 40%;
+    padding-top: 1rem;
+    .graph {
+        width: 50%;
+        &.pie {
+            width: 30%;
+        } 
+        &.bar {
+            padding-left: 3rem;
+        }
+    }
 }
 
 .text-blue {
-    color: rgb(11, 168, 230);
+    color: #00A3EE;
 }
 
 .text-orange {
-    color: rgb(238, 161, 19);
+    color: #FEB800;
+}
+
+.text-green {
+    color: #7FBA00;
+}
+
+.text-red {
+    color: #F14F21;
 }
 
 .gallery {
+    &.hidden {
+        display: none;
+    }
     display: flex;
     flex-wrap: wrap;
     .tile {
-        &.orange {
-            background-color:  rgb(238, 216, 174);
-        }
-        &.blue {
-            background-color:  rgb(193, 226, 239);
-        }
-        width: 25%;
+        width: 15%;
         box-sizing: border-box;
         border-color: #fbfcfc;
         border-style: solid;
+        box-shadow: 1px 1px grey;
+        height: 7rem;
+        border-radius: 0.5rem;
+        margin: 0.2rem;
+        &.orange {
+            background-color:  #eedaa8;
+        }
+        &.blue {
+            background-color:  #bcdfef;
+        }
+        &.green {
+            background-color:  #aed594;
+        }
+        &.red {
+            background-color:  #df9c8a;
+        }
+        .details {
+            padding: 0.1rem;
+            align-content: center;
+            font-size: smaller;
+            word-wrap: break-word;
+            margin: 0.2rem;
+            .bold {
+                font-size: small;
+            }
+            .download {
+                margin-left: 1rem;
+                color: black;
+            }
+            .highlight {
+                background-color: yellow;
+            }
+        }
+        &:hover {
+            border-bottom: 3px black solid;
+            transform: scale(1.1);
+        }
+        .selection {
+            display: none;
+            &.selected {
+                float:right;
+                color: darkgreen;
+                display: block;
+                margin-right: 0.2rem;
+                margin-top: 0.2rem;
+                z-index: 2;
+            }
+        }
+        
     }
+}
+
+.scrollTop {
+    display: block;
+    margin-left: 25%;
+    position: fixed;
+    z-index: 2;
+    color: rgb(1, 87, 94);
+    cursor: pointer;
+    font-size: 3rem;
+    width: 100%;
+    height: 40px;
+    bottom: 40px;
+    border-radius: 2rem;
+    &.hidden {
+        display: none;
+    }
+}
+
+.welcome {
+    color:rgb(1, 87, 94);
+    padding: 12rem;
+    padding-left: 20rem;
 }
