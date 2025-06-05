@@ -1,0 +1,86 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+.dashboard {
+    display: flex;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    line-height: inherit;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.text-white {
+    color:white;
+}
+
+.dashboardMenu {
+    background-color: rgb(41, 183, 239);
+    width: 20%;
+    .dashboardHeader {
+        margin-bottom: 1.5rem;
+        line-height: 1.75rem;
+    }
+    .menuItem {
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+.content {
+    width: 60%;
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.graphicView {
+    width: 20%;;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.h-20 {
+    height: 5rem;
+}
+
+.text-blue {
+    color: rgb(11, 168, 230);
+}
+
+.text-orange {
+    color: rgb(238, 161, 19);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    .tile {
+        &.orange {
+            background-color:  rgb(238, 216, 174);
+        }
+        &.blue {
+            background-color:  rgb(193, 226, 239);
+        }
+        width: 25%;
+        box-sizing: border-box;
+        border-color: #fbfcfc;
+        border-style: solid;
+    }
+}
