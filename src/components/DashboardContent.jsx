@@ -11,7 +11,7 @@ function DashboardContent({data, setSearchTerm}) {
         </div> : <>
         <div className="welcome" >
             <p><strong>Hello User!</strong></p>
-            <h1>Welcome to Clean up tool</h1>
+            <h1>Welcome to File Organizer</h1>
             <h2>Please select a drive to check files.</h2>
         </div>
     </>);
